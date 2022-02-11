@@ -5,12 +5,11 @@ Develop for Good Component Library made for developers who are part of DFG.
 ## How to run the app
 
 1. Clone the repository
-2. Run 
-### 'npm storybook'
+2. Run 'npm run storybook'
 
 The browser will automatically open a new window with the component library. 
-
-If this didn't work, check terminal for exact address.
+If not, check terminal for exact address. 
+Most likely http://localhost:6006/
 
 
 <!-- ## Getting Started with Create React App
