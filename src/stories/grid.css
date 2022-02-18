@@ -1,0 +1,8 @@
+.grid-layout {
+    background-color: #C4C4C4;
+}
+
+.inner-divs {
+    display: inline-block;
+    border: 1px #C4C4C4;
+}
