@@ -5,7 +5,7 @@ import { GridDiv } from './GridDiv.jsx';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Components/Grid',
+  title: 'Components/Primitives/Grid',
   component: Grid,
   subcomponents: { GridDiv },
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
@@ -18,27 +18,19 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template = (args) => <Grid {...args} />;
 
-
 export const Desktop = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Desktop.args = {
   // primary: true,
   width:1440,
   height:1024,
-  mobile: "false"
+  mobile: false
 };
 
-export const SurfacePro8 = Template.bind({});
-SurfacePro8.args = {
-  width:1440,
-  height:960,
-  mobile: "false"
-};
-
-export const iPhone13 = Template.bind({});
-iPhone13.args = {
+export const Mobile = Template.bind({});
+Mobile.args = {
   width:390,
   height:844,
-  mobile: "true"
+  mobile: true
 };
 

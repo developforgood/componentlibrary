@@ -5,14 +5,15 @@ import './grid.css';
 /**
  * Desktop UI component for user interaction
  */
-export const GridDiv = ({ width,height }) => {
+export const GridDiv = ({ width,height, smaller }) => {
   const style = {
-    width : {width} + "%",
-    height : {height} + "%"
+    width : width + "%",
+    height : height
   }
+  const name = smaller? 'inner-divs grid-divs' : 'grid-divs';
   return (
     <div
-      className={['grid-layout', 'inner-divs'].join(" ")}
+      className={name}
       style = {style}
     >
     </div>
@@ -27,10 +28,10 @@ GridDiv.propTypes = {
   /**
    * What background color to use
    */
-  height: PropTypes.number,
+    height: PropTypes.number,
 };
 
 GridDiv.defaultProps = {
   width: 100,
-  height: 38
+  height: 338
 };
