@@ -1,8 +1,34 @@
-.grid-layout {
+.back {
+    border: 2px solid grey;
+}
+
+.grid-divs {
+    display: inline-block;
     background-color: #C4C4C4;
 }
 
+.grid-holder {
+    display: grid;
+    margin-top: 65px;
+    width: 100%;
+    gap:20px;
+}
+
+#g1 {
+    grid-row:1;
+    grid-column: 1;
+}
+
+#g2 {
+    grid-row:1;
+    grid-column: 2;
+}
+
+#g3 {
+    grid-row:1;
+    grid-column: 3;
+}
+
 .inner-divs {
-    display: inline-block;
-    border: 1px #C4C4C4;
+    background-color: #C4C4C4;
 }
