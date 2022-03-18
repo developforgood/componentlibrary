@@ -5,18 +5,19 @@ import './color.css';
 /**
  * Primary UI component for user interaction
  */
-export const Color = ({ color, ...props }) => {
+export const Text = ({ color, text, ...props }) => {
   const style = {
-    "width" : "30%",
-    "marginLeft" : "20%",
-    "marginTop" : 40,
-    "height" : 70,
-    "borderRadius": 5,
-    "background" : color,
-    "border" : "1px solid gray"
+    "borderRadius" : 5,
+    "border" : "1px solid gray",
+    "background" : "#EFF2F5",
+    "width": 180
+  };
+  const style2 = {
+    "color" : color
   };
   return (
     <div style = {style}>
+        <p style = {style2}> {text} </p>
     </div>
   );
 };
