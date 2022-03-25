@@ -1,10 +1,6 @@
-.back {
-    border: 2px solid grey;
-}
-
 .grid-divs {
-    display: inline-block;
     background-color: #C4C4C4;
+    margin: none;
 }
 
 .grid-holder {

@@ -21,10 +21,10 @@ export const Secondary = (args, { globals: { brandColor } }) => {
   return <Button backgroundColor = {brandColor} label = {'Button'} />;
 }
 
-export const Large = (args, { globals: { buttonColor } }) => {
-  return <Button backgroundColor = {buttonColor} label = {'Button'} size = {'large'}/>;
+export const Large = (args, { globals: { brandColor } }) => {
+  return <Button backgroundColor = {brandColor} label = {'Button'} size = {'large'}/>;
 }
 
-export const Small = (args, { globals: { buttonColor } }) => {
-  return <Button backgroundColor = {buttonColor} label = {'Button'} size = {'small'}/>;
+export const Small = (args, { globals: { brandColor } }) => {
+  return <Button backgroundColor = {brandColor} label = {'Button'} size = {'small'}/>;
 }

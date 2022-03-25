@@ -32,21 +32,21 @@ export const globalTypes = {
       showName: true,
     },
   },
-  buttonColor: {
-    name: 'ButtonColor',
-    description: 'Button Color for components',
-    defaultValue: '#0067C5',
-    toolbar: {
-      icon: 'paintbrush',
-      // Array of plain string values or MenuItem shape (see below)
-      items: [
-        { value : "#0067C5", title : "Background Light Blue"},
-        { value : "#004787", title : "Background Dark Blue"},
-      ],
-      // Property that specifies if the name of the item will be displayed
-      showName: true,
-    },
-  },
+  // buttonColor: {
+  //   name: 'ButtonColor',
+  //   description: 'Button Color for components',
+  //   defaultValue: '#0067C5',
+  //   toolbar: {
+  //     icon: 'paintbrush',
+  //     // Array of plain string values or MenuItem shape (see below)
+  //     items: [
+  //       { value : "#0067C5", title : "Background Light Blue"},
+  //       { value : "#004787", title : "Background Dark Blue"},
+  //     ],
+  //     // Property that specifies if the name of the item will be displayed
+  //     showName: true,
+  //   },
+  // },
 };
 // Initialize color for brand color
 process.env.DFG_BRAND_COLORS = {
