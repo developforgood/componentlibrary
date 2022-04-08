@@ -16,5 +16,5 @@ const Template = (args) => <Color {...args} />;
 export const Background = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Background.args = {
-    color : process.env.DFG_BACKGROUND_COLORS.backgroundColor,
+    defColor : process.env.DFG_BACKGROUND_COLORS.backgroundColor,
 };

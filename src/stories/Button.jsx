@@ -6,8 +6,21 @@ import { globalTypes } from '../../.storybook/preview';
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export const Button = ({ type, backgroundColor, size, label, ...props }) => {
+  let mode = 'storybook-button--primary';
+  switch (type) {
+    case 'primary':
+      backgroundColor = backgroundColor === process.env.CUSTOM_BRAND_COLORS.primary? backgroundColor : process.env.CUSTOM_BRAND_COLORS.primary;
+      break;
+    case 'secondary':
+      backgroundColor = backgroundColor === process.env.CUSTOM_BRAND_COLORS.secondary? backgroundColor : process.env.CUSTOM_BRAND_COLORS.secondary;
+      mode ='storybook-button--secondary';
+      break;
+    default:
+      backgroundColor = backgroundColor === process.env.CUSTOM_BRAND_COLORS.tertiary? backgroundColor : process.env.CUSTOM_BRAND_COLORS.tertiary;
+      mode ='storybook-button--secondary';
+      break;
+  }
   return (
     <button
       type="button"

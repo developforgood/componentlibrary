@@ -16,11 +16,11 @@ const Template = (args) => <Color {...args} />;
 export const SuccessBackgroundColor = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 SuccessBackgroundColor.args = {
-    color : process.env.DFG_SUCCESS_COLORS.successBackgroundColor,
+  defColor : process.env.DFG_SUCCESS_COLORS.successBackgroundColor,
 };
 
 export const SuccessOutlineColor = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 SuccessOutlineColor.args = {
-    color : process.env.DFG_SUCCESS_COLORS.successOutlineColor,
+  defColor : process.env.DFG_SUCCESS_COLORS.successOutlineColor,
 };

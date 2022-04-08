@@ -1,13 +1,15 @@
 import React from 'react';
 
-import { Color } from './Color.jsx';
+import { Color } from './Color';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Components/Primitives/ColorPreviews/BrandColor',
   component: Color,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {},
+  argTypes: {
+    color: { control: 'color' },
+  },
 };
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
@@ -16,47 +18,71 @@ const Template = (args) => <Color {...args} />;
 export const UltraLightDFGRed = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 UltraLightDFGRed.args = {
-  color : process.env.DFG_BRAND_COLORS.ultraLightDFGRedColor
+  defColor : process.env.DFG_BRAND_COLORS.ultraLightDFGRedColor,
+  isPrimary : true,
+  isSecondary : false,
+  isTertiary : false
 };
 
 export const LightDFGRed = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 LightDFGRed.args = {
-  color : process.env.DFG_BRAND_COLORS.lightDFGRedColor
+  defColor : process.env.DFG_BRAND_COLORS.lightDFGRedColor,
+  isPrimary : true,
+  isSecondary : false,
+  isTertiary : false
 };
 
 export const DFGRed = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 DFGRed.args = {
-  color : process.env.DFG_BRAND_COLORS.DFGRedColor
+  defColor : process.env.DFG_BRAND_COLORS.DFGRedColor,
+  isPrimary : true,
+  isSecondary : false,
+  isTertiary : false
 };
 
 export const StrongDFGRed = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 StrongDFGRed.args = {
-  color : process.env.DFG_BRAND_COLORS.strongDFGRedColor
+  defColor : process.env.DFG_BRAND_COLORS.strongDFGRedColor,
+  isPrimary : true,
+  isSecondary : false,
+  isTertiary : false
 };
 
 export const UltraLightDFGBlue = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 UltraLightDFGBlue.args = {
-  color : process.env.DFG_BRAND_COLORS.ultraLightDFGBlueColor
+  defColor : process.env.DFG_BRAND_COLORS.ultraLightDFGBlueColor,
+  isPrimary : true,
+  isSecondary : false,
+  isTertiary : false
 };
 
 export const LightDFGBlue = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 LightDFGBlue.args = {
-  color : process.env.DFG_BRAND_COLORS.lightDFGBlueColor
+  defColor : process.env.DFG_BRAND_COLORS.lightDFGBlueColor,
+  isPrimary : true,
+  isSecondary : false,
+  isTertiary : false
 };
 
 export const DFGBlue = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 DFGBlue.args = {
-  color : process.env.DFG_BRAND_COLORS.DFGBlueColor
+  defColor : process.env.DFG_BRAND_COLORS.DFGBlueColor,
+  isPrimary : true,
+  isSecondary : false,
+  isTertiary : false
 };
 
 export const StrongDFGBlue = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 StrongDFGBlue.args = {
-  color : process.env.DFG_BRAND_COLORS.strongDFGBlueColor
+  defColor : process.env.DFG_BRAND_COLORS.strongDFGBlueColor,
+  isPrimary : true,
+  isSecondary : false,
+  isTertiary : false
 };

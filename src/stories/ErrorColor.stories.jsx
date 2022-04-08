@@ -16,11 +16,11 @@ const Template = (args) => <Color {...args} />;
 export const ErrorBackgroundColor = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 ErrorBackgroundColor.args = {
-    color : process.env.DFG_ERROR_COLORS.errorBackgroundColor,
+    defColor : process.env.DFG_ERROR_COLORS.errorBackgroundColor,
 };
 
 export const ErrorOutlineColor = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 ErrorOutlineColor.args = {
-    color : process.env.DFG_ERROR_COLORS.errorOutlineColor,
+  defColor : process.env.DFG_ERROR_COLORS.errorOutlineColor,
 };
