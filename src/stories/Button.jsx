@@ -6,26 +6,52 @@ import { globalTypes } from '../../.storybook/preview';
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ type, backgroundColor, size, label, ...props }) => {
-  let mode = 'storybook-button--primary';
-  switch (type) {
+export const Button = ({ buttonType, backgroundColor, size, label, ...props }) => {
+  let style = {
+    "backgroundColor" : backgroundColor,
+    "fontFamily" : "'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+    "fontWeight" : "700",
+    "border" : 0,
+    "borderRadius" : "3em",
+    "cursor" : "pointer",
+    "display" : "inline-block",
+    "lineHeight" : 1,
+    "color" : "white",
+    "boxShadow" : "rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset"
+  };
+  switch (buttonType) {
     case 'primary':
-      backgroundColor = backgroundColor === process.env.CUSTOM_BRAND_COLORS.primary? backgroundColor : process.env.CUSTOM_BRAND_COLORS.primary;
+      if (backgroundColor != process.env.CUSTOM_BRAND_COLORS.primary){
+        backgroundColor = process.env.CUSTOM_BRAND_COLORS.primary;
+      }
+      style = {
+        "backgroundColor" : backgroundColor,
+        "fontFamily" : "'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "fontWeight" : "700",
+        "border" : 0,
+        "borderRadius" : "3em",
+        "cursor" : "pointer",
+        "display" : "inline-block",
+        "lineHeight" : 1,
+        "color" : "white"
+      }
       break;
     case 'secondary':
-      backgroundColor = backgroundColor === process.env.CUSTOM_BRAND_COLORS.secondary? backgroundColor : process.env.CUSTOM_BRAND_COLORS.secondary;
-      mode ='storybook-button--secondary';
+      if (backgroundColor != process.env.CUSTOM_BRAND_COLORS.secondary){
+        backgroundColor = process.env.CUSTOM_BRAND_COLORS.secondary;
+      }
       break;
     default:
-      backgroundColor = backgroundColor === process.env.CUSTOM_BRAND_COLORS.tertiary? backgroundColor : process.env.CUSTOM_BRAND_COLORS.tertiary;
-      mode ='storybook-button--secondary';
+      if (backgroundColor != process.env.CUSTOM_BRAND_COLORS.tertiary){
+        backgroundColor = process.env.CUSTOM_BRAND_COLORS.tertiary;
+      }
       break;
   }
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={backgroundColor && { backgroundColor }}
+      className={[`storybook-button--${size}`].join(' ')}
+      style = {style}
       {...props}
     >
       {label}
@@ -34,10 +60,6 @@ export const Button = ({ type, backgroundColor, size, label, ...props }) => {
 };
 
 Button.propTypes = {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
   /**
    * What background color to use
    */
@@ -58,7 +80,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
   backgroundColor: null,
-  primary: false,
   size: 'medium',
   onClick: undefined,
 };

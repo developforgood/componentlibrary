@@ -17,13 +17,11 @@ function handleClickToSave(event) {
       break;
 
   }
-  console.log();
-  
 };
 /**
  * Primary UI component for user interaction
  */
-export const Color = ({ color, defColor, isPrimary, isSecondary, isTertiary, isBrand, ...props }) => {
+export const Color = ({ color, defColor, isPrimary, isSecondary, isTertiary, isBrand,  ...props }) => {
   const style = {
     "width" : "30%",
     "marginLeft" : "20%",
@@ -36,17 +34,26 @@ export const Color = ({ color, defColor, isPrimary, isSecondary, isTertiary, isB
   if (isBrand) {
     const decider = isPrimary ? 1 : isSecondary ? 2 : isTertiary ? 3 : 4;
     if (decider < 4){
-      const style2 = {
+      let style2 = {
         "width" : "30%",
         "marginLeft" : "20%",
         "marginTop" : 40,
         "height" : 30,
         "borderRadius": decider,
         "border" : "4 px solid gray",
-        "backgroundColor" : color,  
+        "backgroundColor" : defColor,  
       };
       const text = isPrimary ? "primary" : isSecondary ? "secondary" : "tertiary";
       if (color){
+        style2 = {
+          "width" : "30%",
+          "marginLeft" : "20%",
+          "marginTop" : 40,
+          "height" : 30,
+          "borderRadius": decider,
+          "border" : "4 px solid gray",
+          "backgroundColor" : color,  
+        };
         return (
           <div>
           <div style = {style} id = ""></div>

@@ -16,21 +16,21 @@ const Template = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
-  type : 'primary',
+  buttonType : 'primary',
   label: 'Button',
   backgroundColor : process.env.CUSTOM_BRAND_COLORS.primary
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  type : 'secondary',
+  buttonType : 'secondary',
   label: 'Button',
   backgroundColor : process.env.CUSTOM_BRAND_COLORS.secondary
 };
 
 export const Large = Template.bind({});
 Large.args = {
-  type : 'tertiary',
+  buttonType : 'tertiary',
   size: 'large',
   label: 'Button',
   backgroundColor : process.env.CUSTOM_BRAND_COLORS.tertiary
@@ -38,7 +38,7 @@ Large.args = {
 
 export const Small = Template.bind({});
 Small.args = {
-  type : 'tertiary',
+  buttonType : 'tertiary',
   size: 'small',
   label: 'Button',
   backgroundColor : process.env.CUSTOM_BRAND_COLORS.tertiary

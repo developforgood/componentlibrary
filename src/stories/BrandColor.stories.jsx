@@ -21,7 +21,8 @@ UltraLightDFGRed.args = {
   defColor : process.env.DFG_BRAND_COLORS.ultraLightDFGRedColor,
   isPrimary : true,
   isSecondary : false,
-  isTertiary : false
+  isTertiary : false,
+  isBrand : true
 };
 
 export const LightDFGRed = Template.bind({});
@@ -30,7 +31,8 @@ LightDFGRed.args = {
   defColor : process.env.DFG_BRAND_COLORS.lightDFGRedColor,
   isPrimary : true,
   isSecondary : false,
-  isTertiary : false
+  isTertiary : false,
+  isBrand : true
 };
 
 export const DFGRed = Template.bind({});
@@ -39,7 +41,8 @@ DFGRed.args = {
   defColor : process.env.DFG_BRAND_COLORS.DFGRedColor,
   isPrimary : true,
   isSecondary : false,
-  isTertiary : false
+  isTertiary : false,
+  isBrand : true
 };
 
 export const StrongDFGRed = Template.bind({});
@@ -48,7 +51,8 @@ StrongDFGRed.args = {
   defColor : process.env.DFG_BRAND_COLORS.strongDFGRedColor,
   isPrimary : true,
   isSecondary : false,
-  isTertiary : false
+  isTertiary : false,
+  isBrand : true
 };
 
 export const UltraLightDFGBlue = Template.bind({});
@@ -57,7 +61,8 @@ UltraLightDFGBlue.args = {
   defColor : process.env.DFG_BRAND_COLORS.ultraLightDFGBlueColor,
   isPrimary : true,
   isSecondary : false,
-  isTertiary : false
+  isTertiary : false,
+  isBrand : true
 };
 
 export const LightDFGBlue = Template.bind({});
@@ -66,7 +71,8 @@ LightDFGBlue.args = {
   defColor : process.env.DFG_BRAND_COLORS.lightDFGBlueColor,
   isPrimary : true,
   isSecondary : false,
-  isTertiary : false
+  isTertiary : false,
+  isBrand : true
 };
 
 export const DFGBlue = Template.bind({});
@@ -75,7 +81,8 @@ DFGBlue.args = {
   defColor : process.env.DFG_BRAND_COLORS.DFGBlueColor,
   isPrimary : true,
   isSecondary : false,
-  isTertiary : false
+  isTertiary : false,
+  isBrand : true
 };
 
 export const StrongDFGBlue = Template.bind({});
@@ -84,5 +91,6 @@ StrongDFGBlue.args = {
   defColor : process.env.DFG_BRAND_COLORS.strongDFGBlueColor,
   isPrimary : true,
   isSecondary : false,
-  isTertiary : false
+  isTertiary : false,
+  isBrand : true
 };
