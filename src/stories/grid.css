@@ -1,30 +1,31 @@
-.grid-divs {
-    background-color: #C4C4C4;
-    margin: none;
+html{
+    margin: 0px !important;
 }
 
-.grid-holder {
-    display: grid;
-    margin-top: 65px;
-    width: 100%;
-    gap:20px;
+#root{
+    height:100vh;
 }
 
-#g1 {
-    grid-row:1;
-    grid-column: 1;
+#marginSetter {
+    font-size: 14;
 }
 
-#g2 {
-    grid-row:1;
-    grid-column: 2;
+#firstRow{
+    height: 40%;
 }
 
-#g3 {
-    grid-row:1;
-    grid-column: 3;
+#secondRow{
+    height: 60%;
 }
 
-.inner-divs {
-    background-color: #C4C4C4;
+.h-395{
+    height: 39%;
+}
+
+#h-37{
+    height: 37%;
+}
+
+#h-568{
+    height: 63%;
 }

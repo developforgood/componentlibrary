@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import './color.css';
 
 
-
 function handleClickToSave(event) { 
-  switch (event.target.style.borderRadius) {
+  switch (event.target.style.minWidth) {
     case "1px":
       process.env.CUSTOM_BRAND_COLORS.primary = event.target.style.backgroundColor;
       break;
@@ -15,14 +14,14 @@ function handleClickToSave(event) {
     default:
       process.env.CUSTOM_BRAND_COLORS.tertiary = event.target.style.backgroundColor;
       break;
-
   }
 };
+
 /**
  * Primary UI component for user interaction
  */
 export const Color = ({ color, defColor, isPrimary, isSecondary, isTertiary, isBrand,  ...props }) => {
-  const style = {
+  let style = {
     "width" : "30%",
     "marginLeft" : "20%",
     "marginTop" : 40,
@@ -39,18 +38,29 @@ export const Color = ({ color, defColor, isPrimary, isSecondary, isTertiary, isB
         "marginLeft" : "20%",
         "marginTop" : 40,
         "height" : 30,
-        "borderRadius": decider,
+        "borderRadius": 5,
+        "minWidth" : decider,
         "border" : "4 px solid gray",
         "backgroundColor" : defColor,  
       };
       const text = isPrimary ? "primary" : isSecondary ? "secondary" : "tertiary";
       if (color){
+        style = {
+          "width" : "30%",
+          "marginLeft" : "20%",
+          "marginTop" : 40,
+          "height" : 70,
+          "borderRadius": 5,
+          "background" : color,
+          "border" : "1px solid gray"
+        };
         style2 = {
           "width" : "30%",
           "marginLeft" : "20%",
           "marginTop" : 40,
           "height" : 30,
-          "borderRadius": decider,
+          "borderRadius": 5,
+          "minWidth" : decider,
           "border" : "4 px solid gray",
           "backgroundColor" : color,  
         };

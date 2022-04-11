@@ -7,18 +7,7 @@ import { globalTypes } from '../../.storybook/preview';
  * Primary UI component for user interaction
  */
 export const Button = ({ buttonType, backgroundColor, size, label, ...props }) => {
-  let style = {
-    "backgroundColor" : backgroundColor,
-    "fontFamily" : "'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
-    "fontWeight" : "700",
-    "border" : 0,
-    "borderRadius" : "3em",
-    "cursor" : "pointer",
-    "display" : "inline-block",
-    "lineHeight" : 1,
-    "color" : "white",
-    "boxShadow" : "rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset"
-  };
+  let style = {};
   switch (buttonType) {
     case 'primary':
       if (backgroundColor != process.env.CUSTOM_BRAND_COLORS.primary){
@@ -40,11 +29,35 @@ export const Button = ({ buttonType, backgroundColor, size, label, ...props }) =
       if (backgroundColor != process.env.CUSTOM_BRAND_COLORS.secondary){
         backgroundColor = process.env.CUSTOM_BRAND_COLORS.secondary;
       }
+      style = {
+        "backgroundColor" : backgroundColor,
+        "fontFamily" : "'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "fontWeight" : "700",
+        "border" : 0,
+        "borderRadius" : "3em",
+        "cursor" : "pointer",
+        "display" : "inline-block",
+        "lineHeight" : 1,
+        "color" : "white",
+        "boxShadow" : "rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset"
+      };
       break;
     default:
       if (backgroundColor != process.env.CUSTOM_BRAND_COLORS.tertiary){
         backgroundColor = process.env.CUSTOM_BRAND_COLORS.tertiary;
       }
+      style = {
+        "backgroundColor" : backgroundColor,
+        "fontFamily" : "'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "fontWeight" : "700",
+        "border" : 0,
+        "borderRadius" : "3em",
+        "cursor" : "pointer",
+        "display" : "inline-block",
+        "lineHeight" : 1,
+        "color" : "white",
+        "boxShadow" : "rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset"
+      };
       break;
   }
   return (

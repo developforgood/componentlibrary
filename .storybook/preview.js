@@ -1,3 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.js';
+
 // Initialize color for brand color
 process.env.DFG_BRAND_COLORS = {
   // Brand
