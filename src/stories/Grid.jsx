@@ -1,92 +1,27 @@
 import React from "react";
 import "./grid.css";
+import { Row } from './Row.jsx';
 
 /**
  * Desktop UI component for user interaction
  */
-export const Grid = ({type, ...props }) => {
+export const Grid = ({numRows, numCols, ...props }) => {
+  let rows = [];
   const style = {
-    "height":"100vh"
-  };
-  const style2 = {
-    "backgroundColor": "lightgrey",
-    "borderRadius" : 5,
-    "width": "100%",
-    "height" : "100%"
-  };
-  if (type === 2){
-    return (
-      <div 
-      className="container"
-      style = {style}>
-        <div
-        className="row px-2 pt-3 pb-0 h-50"
-        >
-          <div
-          style = {style2}>
-          </div>
-        </div>
-        <div
-        className="row p-1 pt-3 h-25"
-        >
-          <div
-          className="col-12 col-md-6 p-1 h-100"
-          >
-            <div style = {style2}></div>
-          </div>
-          <div
-          className="col-12 col-md-6 p-1 h-100"
-          >
-            <div style = {style2}></div>
-          </div>
-        </div>
-      </div> 
-    )
+    width : "70%",
+    marginLeft : "15%"
+  }
+  for (let i = 0; i < numRows; i++){
+    rows.push(<Row colNum = {numCols} />);
   }
   return (
-    <div 
-    className="container"
-    style = {style}>
-      <div
-      className="row p-2 pt-3"
-      id = "firstRow"
-      >
-        <div
-        style={style2}>
-        </div>
-      </div>  
-      <div
-      className="row px-2 py-0 pb-2"
-      id = "secondRow"
-      >
-        <div 
-        className="col-6 px-0 pe-1"
-        >
-          <div
-          style={style2}>
-          </div>
-        </div>
-        <div 
-        className="col-6 h-100 ml-2 p-0 ps-1">
-          <div
-          className="row m-0"
-          id = "h-37"
-          >
-            <div
-            style = {style2}>
-            </div>
-          </div>
-          <div
-          className="row mx-0 mb-0 pt-3"
-          id = "h-568"
-          >
-            <div
-            style = {style2}>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className = "h-100" style = {style}>
+      {rows}
+    </div>
+    );
+};
 
-    </div> 
-  )
+Grid.defaultProps = {
+  numRows: 1,
+  numCols: 5,
 };

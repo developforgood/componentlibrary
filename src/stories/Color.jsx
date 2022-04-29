@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './color.css';
-
 
 function handleClickToSave(event) { 
   switch (event.target.style.minWidth) {
@@ -66,7 +64,7 @@ export const Color = ({ color, defColor, isPrimary, isSecondary, isTertiary, isB
         };
         return (
           <div>
-          <div style = {style} id = ""></div>
+          <div style = {style}></div>
           <button onClick={handleClickToSave} type = "button" style = {style2}> 
           Click to save current customized color to {text} brand color
           </button>
@@ -75,7 +73,7 @@ export const Color = ({ color, defColor, isPrimary, isSecondary, isTertiary, isB
       } 
       return (
         <div>
-        <div style = {style} id = ""></div>
+        <div style = {style}></div>
         <button onClick={handleClickToSave} type = "button" style = {style2}> 
           Click to save current color to {text} brand color
           </button>
@@ -87,14 +85,14 @@ export const Color = ({ color, defColor, isPrimary, isSecondary, isTertiary, isB
     }
     return (
       <div>
-      <div style = {style} id = ""></div>
+      <div style = {style}></div>
       <h3 style = {style3}> Select one of primary, secondary, or tertiary to set brand colors</h3>
       </div>
     );
   }
   return (
     <div>
-    <div style = {style} id = ""></div>
+    <div style = {style}></div>
     </div>
   );
 };

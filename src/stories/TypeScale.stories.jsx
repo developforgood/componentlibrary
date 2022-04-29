@@ -17,48 +17,56 @@ const Template = (args) => <TypeScale {...args} />;
 
 export const ExtraLargeTitle = Template.bind({});
 ExtraLargeTitle.args = {
-  size : 60,
-  font : "Barlow"
+  defSize : process.env.TYPESCALE.extralargetitle,
+  font : "Barlow",
+  type : 0,
 };
 
 export const LargeTitle = Template.bind({});
 LargeTitle.args = {
-  size : 52,
-  font : "Barlow"
+  defSize : process.env.TYPESCALE.largetitle,
+  font : "Barlow",
+  type : 1,
 };
 
 export const MediumTitle = Template.bind({});
 MediumTitle.args = {
-  size : 37,
-  font : "Barlow"
+  defSize : process.env.TYPESCALE.mediumtitle,
+  font : "Barlow",
+  type : 2
 };
 
 export const SmallTitle = Template.bind({});
 SmallTitle.args = {
-  size : 32,
-  font : "Barlow"
+  defSize : process.env.TYPESCALE.smalltitle,
+  font : "Barlow",
+  type : 3
 };
 
 export const ExtraLargeBase = Template.bind({});
 ExtraLargeBase.args = {
-  size : 32,
-  font : "Barlow"
+  defSize : process.env.TYPESCALE.extralargebase,
+  font : "Barlow",
+  type : 4
 };
 
 export const LargeBase = Template.bind({});
 LargeBase.args = {
-  size : 28,
-  font : "Barlow"
+  defSize : process.env.TYPESCALE.largebase,
+  font : "Barlow",
+  type : 5
 };
 
 export const MediumBase = Template.bind({});
 MediumBase.args = {
-  size : 16,
-  font : "Barlow"
+  defSize : process.env.TYPESCALE.mediumbase,
+  font : "Barlow",
+  type : 6
 };
 
 export const SmallBase = Template.bind({});
 SmallBase.args = {
-  size : 14,
-  font : "Barlow"
+  defSize : process.env.TYPESCALE.smallbase,
+  font : "Barlow",
+  type : 7
 };

@@ -6,15 +6,19 @@ import { globalTypes } from '../../.storybook/preview';
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ buttonType, backgroundColor, size, label, ...props }) => {
+export const Button = ({ buttonType, backgroundColor, size, label, fontsize, ...props }) => {
   let style = {};
   switch (buttonType) {
     case 'primary':
       if (backgroundColor != process.env.CUSTOM_BRAND_COLORS.primary){
         backgroundColor = process.env.CUSTOM_BRAND_COLORS.primary;
       }
+      if (fontsize != process.env.TYPESCALE.extralargetitle){
+        fontsize = process.env.TYPESCALE.extralargetitle;
+      }
       style = {
         "backgroundColor" : backgroundColor,
+        "fontSize" : fontsize,
         "fontFamily" : "'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
         "fontWeight" : "700",
         "border" : 0,
@@ -31,6 +35,7 @@ export const Button = ({ buttonType, backgroundColor, size, label, ...props }) =
       }
       style = {
         "backgroundColor" : backgroundColor,
+        "fontSize" : fontsize,
         "fontFamily" : "'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
         "fontWeight" : "700",
         "border" : 0,
@@ -48,6 +53,7 @@ export const Button = ({ buttonType, backgroundColor, size, label, ...props }) =
       }
       style = {
         "backgroundColor" : backgroundColor,
+        "fontSize" : fontsize,
         "fontFamily" : "'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
         "fontWeight" : "700",
         "border" : 0,

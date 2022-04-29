@@ -18,14 +18,16 @@ export const Primary = Template.bind({});
 Primary.args = {
   buttonType : 'primary',
   label: 'Button',
-  backgroundColor : process.env.CUSTOM_BRAND_COLORS.primary
+  backgroundColor : process.env.CUSTOM_BRAND_COLORS.primary,
+  fontsize : process.env.TYPESCALE.exralargetitle
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   buttonType : 'secondary',
   label: 'Button',
-  backgroundColor : process.env.CUSTOM_BRAND_COLORS.secondary
+  backgroundColor : process.env.CUSTOM_BRAND_COLORS.secondary,
+  fontsize : process.env.TYPESCALE.largetitle
 };
 
 export const Large = Template.bind({});
@@ -33,7 +35,8 @@ Large.args = {
   buttonType : 'tertiary',
   size: 'large',
   label: 'Button',
-  backgroundColor : process.env.CUSTOM_BRAND_COLORS.tertiary
+  backgroundColor : process.env.CUSTOM_BRAND_COLORS.tertiary,
+  fontsize : process.env.TYPESCALE.mediumtitle
 };
 
 export const Small = Template.bind({});
@@ -41,5 +44,6 @@ Small.args = {
   buttonType : 'tertiary',
   size: 'small',
   label: 'Button',
-  backgroundColor : process.env.CUSTOM_BRAND_COLORS.tertiary
+  backgroundColor : process.env.CUSTOM_BRAND_COLORS.tertiary,
+  fontsize : process.env.TYPESCALE.smalltitle
 };

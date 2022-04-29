@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/dist/css/bootstrap.min.js';
 
 // Initialize color for brand color
 process.env.DFG_BRAND_COLORS = {
@@ -60,6 +59,17 @@ process.env.DFG_FIELD_OUTLINE_COLORS = {
   fieldBackgroundColor : "#BDC6CC",
   fieldOutlineColor : "#60707B",
 };
+
+process.env.TYPESCALE = {
+  extralargetitle : 72,
+  largetitle : 60,
+  mediumtitle : 48,
+  smalltitle : 34,
+  extralargebase : 24,
+  largebase : 20,
+  mediumbase : 16,
+  smallbase : 14,
+}
 
 // .storybook/preview.js
 export const parameters = {
