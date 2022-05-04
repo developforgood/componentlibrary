@@ -1,49 +1,55 @@
-import React from 'react';
+import { parameters } from "../../.storybook/preview";
+import Button from "../Button";
 
-import { Button } from './Button';
-
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
-  component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {},
+    title: "Components/Navigation/Button",
+    component: Button,
+    argTypes: {
+        type: {
+            description: "String prop passed to set the appearance of button. Currently set to default colors but can easily be changed in CSS to match brand colors.",
+        },
+        icon: {
+            description: "Boolean determining whether to show the icon or not"
+        },
+        state: {
+            options: ['default', 'selected', 'disabled'],
+            control: { type: 'select' },
+            description: "String prop passed to set the state of the button, hover is also a state but is not needed to be set",
+        },
+        label: {
+            description: "String prop passed to set the label of the button"
+        }
+    },
+    parameters: {
+        docs: {
+            description: {
+              component: "Button component to be used on its own within the webpage or within other components (such as the Navigation Bar). These designs mirror those of the Button component in our React Native library.",
+            },
+          },
+    },
 };
 
-const Template = (args) => <Button {...args} />;
+const Templatea = (args, { globals: { brandColor, brandFont } }) => <Button {...args} fontFamily={brandFont} color={brandColor} />;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  buttonType : 'primary',
-  label: 'Button',
-  backgroundColor : process.env.CUSTOM_BRAND_COLORS.primary,
-  fontsize : process.env.TYPESCALE.exralargetitle
+
+export const Default = Templatea.bind({});
+
+Default.args = { 
+    type: "primary",
+    icon: false,
+    state: null
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  buttonType : 'secondary',
-  label: 'Button',
-  backgroundColor : process.env.CUSTOM_BRAND_COLORS.secondary,
-  fontsize : process.env.TYPESCALE.largetitle
+export const Selected = Templatea.bind({});
+
+Selected.args = { 
+    ...Default.args,
+    state: 'selected'
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  buttonType : 'tertiary',
-  size: 'large',
-  label: 'Button',
-  backgroundColor : process.env.CUSTOM_BRAND_COLORS.tertiary,
-  fontsize : process.env.TYPESCALE.mediumtitle
-};
+export const Disabled = Templatea.bind({});
 
-export const Small = Template.bind({});
-Small.args = {
-  buttonType : 'tertiary',
-  size: 'small',
-  label: 'Button',
-  backgroundColor : process.env.CUSTOM_BRAND_COLORS.tertiary,
-  fontsize : process.env.TYPESCALE.smalltitle
+Disabled.args = { 
+    ...Default.args,
+    state: 'disabled',
 };
