@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans'); 
+/* Important to note: <link> is likely better but needs to be added to .html file */
+
+.button {
+    border: none;
+    padding: 16px 24px;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .button {
+        width: 100%;
+    }
+}
+.superprimary {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+    background: white;
+}
+button.superprimary.selected:enabled {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.18);
+}
+button.superprimary:hover:enabled {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.18);
+}
+button.superprimary:active:enabled {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.18);
+}
+.superprimary.disabled {
+    box-shadow: none;
+    color: #6A6A6A;
+    background: #E5E5E5;
+}
+
+
+.primary {
+    color: #FFFFFF;
+    background: var(--primary);
+}
+.primary.selected {
+    background: #1444EE;
+}
+button.primary:hover:enabled {
+    background: #1444EE;
+}
+button.primary:active:enabled {
+    background: #1444EE;
+    opacity: .8;
+}
+.primary.disabled {
+    color: #6A6A6A;
+    background: #E5E5E5;
+}
+
+.secondary {
+    background: white;
+    border: 1px solid #0067C5;
+    color: #0067C5;
+    
+}
+.secondary.selected {
+    background: #1444EE0F;
+}
+button.secondary:hover:enabled {
+    background: #1444EE0F;
+}
+button.secondary:active:enabled {
+    background: #1444EE0F;
+}
+.secondary.disabled {
+    color: #6A6A6A;
+    border-color: #D7D7D7;
+    background: white;
+}
+
+.tertiary {
+    background: white;
+    border: none;
+    color: #0067C5;
+    
+}
+
+.tertiary.selected {
+    text-decoration:underline;
+    text-decoration-skip-ink: none;
+}
+button.tertiary:hover:enabled {
+    text-decoration:underline;
+    text-decoration-skip-ink: none;
+}
+button.tertiary:active:enabled {
+    text-decoration:underline;
+    text-decoration-skip-ink: none;
+}
+.tertiary.disabled {
+    color: #6A6A6A;
+    background: white;
+}
+
+
+.buttonText {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.icon {
+    margin-right: 8px;
+}
+.hideIcon {
+    display: none;
+}
