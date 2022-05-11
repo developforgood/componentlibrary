@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans'); 
+/* Important to note: <link> is likely better but needs to be added to .html file */
+nav {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px 0 0;
+    overflow: hidden;
+    display: flex;
+    height: 80px;
+    
+}
+.menu-item-nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.center.menu-item-nav {
+    margin-right: auto;
+    margin-left: auto;
+}
+.left.menu-item-nav {
+    margin-right: auto;
+    
+}
+.right.menu-item-nav {
+    margin-left: auto;
+}
+.menu-item {
+    display: block;
+    float: left;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+}
+
+
+.menu-item a {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #313131;
+
+    text-align: center;
+    text-decoration: none;
+}
+.navButton {
+    border: none;
+    padding: 16px 8px;
+    display: flex;
+    width: 106px;
+    height: 44px;
+}

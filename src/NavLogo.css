@@ -1,0 +1,13 @@
+
+img {
+    object-fit: contain;
+    width: 200px;
+}
+
+.nav-logo {
+    display: block;
+    float: left;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+}
