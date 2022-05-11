@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans'); 
+/* Important to note: <link> is likely better but needs to be added to .html file */
+
+.menu-item:hover a {
+    color: #1444EE;
+}
+.fill.dropdown:hover > button {
+    color: #1444EE;
+}
+.underline.dropdown:hover > button {
+    color: #1444EE;
+}
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    text-decoration: none;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #313131;
+    
+}
+.dropdown-menu {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 300px;
+}
+.dropdown-menu a:last-child {
+    
+    border-radius: 0px 0px 5px 5px;
+}
+.dropdown-menu a {
+    float: none;
+    color: #282828;
+    padding: 8px 8px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    
+}
+.dropdown-menu .show {
+    display: block;
+}
+
+.dropdown-menu .hide {
+    display: none;
+}
+.fill.dropdown-item:hover {
+    background-color: #EBF3FA;
+   
+}
+.fill.dropdown-item:hover > a {
+    font-weight: 700;  
+}
+.highlight.dropdown-item:hover > a {
+    color: #1444EE;
+
+}
+.sidehighlight.dropdown-item {
+    border-left: 8px solid white;
+}
+.sidehighlight.dropdown-item:hover {
+    border-left: 8px solid #0071BC;
+}
