@@ -1,5 +1,5 @@
-import { parameters } from "../../.storybook/preview.js";
-import Button from "../Button.jsx";
+import { parameters } from "../../.storybook/preview";
+import Button from "../Button";
 
 export default {
     title: "Components/Navigation/Button",
