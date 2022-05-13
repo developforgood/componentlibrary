@@ -1,23 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from "styled-components";
+
+
+const TextDiv = styled.div`
+  border-radius : 5px;
+  border : 1px solid gray;
+  background : ${props => props.backgroundcolor};
+  margin-left : 20%;
+`
+
+const TextContent = styled.p`
+  color : ${props => props.color};
+  font-size : 40px;
+`
 
 /**
  * Primary UI component for user interaction
  */
 export const Text = ({ color, text, ...props }) => {
-  const style = {
-    "borderRadius" : 5,
-    "border" : "1px solid gray",
-    "background" : "#EFF2F5",
-    "width": 180
-  };
-  const style2 = {
-    "color" : color
-  };
   return (
-    <div style = {style}>
-        <p style = {style2}> {text} </p>
-    </div>
+    <TextDiv backgroundcolor = {process.env.DFG_BACKGROUND_COLORS.backgroundColor}>
+        <TextContent color = {color}> {text} </TextContent>
+    </TextDiv>
   );
 };
 

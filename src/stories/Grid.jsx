@@ -1,7 +1,13 @@
 import React from "react";
 import "./grid.css";
+import styled from "styled-components";
 import { Row } from './Row.jsx';
 
+
+const GridDiv = styled.div`
+  width : 70%;
+  margin-left : 15%;
+`
 /**
  * Desktop UI component for user interaction
  */
@@ -15,9 +21,9 @@ export const Grid = ({numRows, numCols, ...props }) => {
     rows.push(<Row colNum = {numCols} />);
   }
   return (
-    <div className = "h-100" style = {style}>
+    <GridDiv className = "h-100">
       {rows}
-    </div>
+    </GridDiv>
     );
 };
 

@@ -1,12 +1,12 @@
-import NavigationBar from "../NavigationBar.jsx";
+import NavigationBar from "../NavigationBar";
 import Button from '../Button';
 
 import { CgProfile } from "react-icons/cg";
 import logoImg from '../images/dfg_square.png';
-import Dropdown from "../Dropdown.jsx";
-import NavLogo from '../NavLogo.jsx';
-import NavItem from '../NavItem.jsx';
-import NavGroup from '../NavGroup.jsx';
+import Dropdown from "../Dropdown";
+import NavLogo from '../NavLogo';
+import NavItem from '../NavItem';
+import NavGroup from '../NavGroup';
 export default {
     title: "Components/Navigation/NavigationBar",
     component: NavigationBar,
