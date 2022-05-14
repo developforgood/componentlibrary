@@ -1,15 +1,26 @@
 # DFG Component Library
 
-Develop for Good Component Library made for developers who are part of DFG.
+Develop for Good Component Library made for every volunteer in DFG.
 
-## How to run the app
+## How to open/run storybook
 
-1. Clone the repository
-2. Run 'npm run storybook'
+!! You need a github account to access this library.
 
+1. Click the green "Code" button
+2. Copy the link that stars with https with the copy button right next to it
+3. Open terminal
+4. Type in " git clone "the link that you copied" "
+5. Type in "cd componentlibrary"
+7. Type in 'npm run storybook'
+
+And now the storybook will run on your local server!
 The browser will automatically open a new window with the component library. 
 If not, check terminal for exact address. 
 Most likely http://localhost:6006/
+
+## How to use
+
+If you're a developer wanting to use the components displayed on the library, you should clone this repostory and use the actual source code. Storybook does NOT save your settings/changes that you have created while runnnig the storybook. 
 
 
 <!-- ## Getting Started with Create React App
