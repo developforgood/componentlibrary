@@ -1,4 +1,3 @@
-import { parameters } from "../../.storybook/preview";
 import Button from "../Button";
 
 export default {
@@ -23,7 +22,7 @@ export default {
     parameters: {
         docs: {
             description: {
-              component: "Button component to be used on its own within the webpage or within other components (such as the Navigation Bar). These designs mirror those of the Button component in our React Native library.",
+              component: "Buttons are versatile in utility and are meant to be used throughout the webpage either standalone or as part of other components (navigation bar, models, cards, etc.) whenever you want a user to take action.  These designs mirror those of the Button component in our React Native library.",
             },
           },
     },
@@ -35,21 +34,71 @@ const Templatea = (args, { globals: { brandColor, brandFont } }) => <Button {...
 export const Default = Templatea.bind({});
 
 Default.args = { 
-    type: "primary",
+    type: "filled",
     icon: false,
-    state: null
+    state: 'default',
+    size: 'md',
+    iconAlign: 'right'
 };
 
-export const Selected = Templatea.bind({});
+const ButtonType = (args) => 
+    <div style={{display: "flex"}}>
+    <Button {...args} type="elevated" /> 
+    <Button {...args} type="filled" />
+    <Button {...args} type="outlined" />
+    <Button {...args} type="text" />
+    </div>;
+export const ButtonTypes = ButtonType.bind({});
 
-Selected.args = { 
+ButtonTypes.args = { 
     ...Default.args,
-    state: 'selected'
 };
+ButtonTypes.parameters = {
+    docs: {
+      description: {
+        story: 'There are four main types of buttons (Elevated, Filled, Outlined, Text) that have different emphasis with filled being the “primary” emphasis and outlined and text being less so respectively. ',
+      },
+    },
+  };
+const ButtonSize = (args) => 
+    <div style={{display: "flex"}}>
+    <Button {...args} size="sm" /> 
+    <Button {...args} size="md" />
+    <Button {...args} size="lg"/>
+    </div>;
+export const ButtonSizes = ButtonSize.bind({});
 
-export const Disabled = Templatea.bind({});
-
-Disabled.args = { 
+ButtonSizes.args = { 
     ...Default.args,
-    state: 'disabled',
 };
+
+ButtonSizes.parameters = {
+    docs: {
+      description: {
+        story: 'The sizes of the buttons sets the height of the button and adjusts the padding and font size automatically to fit the size. There are 3 sizes that a button can be: small, medium, and large, with the default being medium. They are represented by “sm”, “md”, and “lg” respectively and can be passed to the size prop.',
+      },
+    },
+  };
+
+const ButtonIcon = (args) => 
+    <div style={{display: "flex"}}>
+    <Button {...args} /> 
+    <Button {...args} icon="true" iconAlign="right" />
+    <Button {...args} icon="true" iconAlign="left"/>
+    </div>;
+
+
+export const ButtonIcons = ButtonIcon.bind({});
+
+
+ButtonIcons.args = { 
+    ...Default.args,
+};
+
+ButtonIcons.parameters = {
+    docs: {
+      description: {
+        story: 'Icons can be added through modifying the pass passed in through the icon prop.  Note that the button comes with a default Icon Placeholder (a dashed rectangle), one can easily replace the Icon component inside the button with a icon of their choosing (with for example a component from an imported icon library) through the icon prop.  Icons can either be on the left or right side of the label, by default it is on the left, however one can pass “left” or “right” to the iconAlign prop to adjust it to their respective alignments.',
+      },
+    },
+  };

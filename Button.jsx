@@ -2,18 +2,21 @@ import './Button.css';
 import { AiFillBell, AiOutlinePlus } from "react-icons/ai";
 import PropTypes from 'prop-types';
 
-function Button({type, state, icon, label, fontSize, fontFamily, color}) {
+function Button({type, state, icon, label, fontSize, fontFamily, color, size}) {
+  if (color == undefined) {
+    color = "#0043C5";
+  }
   let styles = {
     fontSize: fontSize,
     fontFamily: fontFamily,
-    "--primary": color  
+    "--primary": "#0043C5"
   }
-  console.log(color);
+  console.log(styles["--primary"]);
   return (
-    <button className={`button buttonText ${type} ${state}`} style={styles} disabled={state === 'disabled'}>
+    <button className={`button buttonText ${type} ${state} ${size}`} style={styles} disabled={state === 'disabled'}>
         <i className={`${icon ? "icon" : "hideIcon"}`}><AiOutlinePlus size={14 }/></i>
         {label}
-    </button>
+    </button> 
   );
 }
 Button.defaultProps = {

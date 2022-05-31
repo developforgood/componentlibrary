@@ -1,30 +1,46 @@
 import './Button.css';
-import { AiFillBell, AiOutlinePlus } from "react-icons/ai";
+import { ReactComponent as Icon } from './stories/assets/iconPlace.svg';
 import PropTypes from 'prop-types';
 
-function Button({type, state, icon, label, fontSize, fontFamily, color}) {
+function Button({type, state, icon, label, fontSize, fontFamily, color, size, iconAlign}) {
   let styles = {
     fontSize: fontSize,
     fontFamily: fontFamily,
-    "--primary": color  
+    "--primary": color ? color : "#0043C5"
   }
-  console.log(color);
   return (
-    <button className={`button buttonText ${type} ${state}`} style={styles} disabled={state === 'disabled'}>
-        <i className={`${icon ? "icon" : "hideIcon"}`}><AiOutlinePlus size={14 }/></i>
+    <button className={`button buttonText ${type} ${state} ${size}`} style={styles} disabled={state === 'disabled'}>
+        {iconAlign == "right" &&
+        <>
+        <i className={`${icon ? "iconR" : "hideIcon"}`}><Icon className={`icon ${state} ${type}-svg`}/></i>
         {label}
+        </>
+        }
+        {iconAlign == "left" &&
+        <>
+        {label}
+        <i className={`${icon ? "iconL" : "hideIcon"}`}><Icon className={`icon ${state} ${type}-svg`}/></i>
+        </>
+        }
+        
+  
+        
     </button>
   );
 }
 Button.defaultProps = {
-    type: 'primary',
+    type: 'filled',
     icon: false,
-    label: 'Primary Action'
+    label: 'Primary Action',
+    size: 'md',
+    iconAlign: "right"
 }
 Button.propTypes = {
-    type: PropTypes.oneOf(["superprimary", "primary", "secondary", "tertiary"]),
+    type: PropTypes.oneOf(["elevated", "filled", "outlined", "text"]),
     icon: PropTypes.bool,
     state: PropTypes.oneOf(["default", "selected", "disabled"]),
-    label: PropTypes.string
+    size: PropTypes.oneOf(["sm", "md", "lg"]),
+    label: PropTypes.string,
+    iconAlign: PropTypes.oneOf(["right", "left"]),
 }
 export default Button;

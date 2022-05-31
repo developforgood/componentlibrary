@@ -1,4 +1,25 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+export const parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    }, 
+    expanded: true
+  },
+  layout: 'fullscreen',
+};
+
+export const decorators = [
+  Story => (
+    <>
+      <Story />
+    </>
+  ),
+];
+
 
 // Initialize color for brand color
 process.env.DFG_BRAND_COLORS = {
@@ -87,17 +108,6 @@ process.env.TYPESCALE = {
   largebase : 20,
   mediumbase : 16,
   smallbase : 14,
-}
-
-// .storybook/preview.js
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
 }
 
 

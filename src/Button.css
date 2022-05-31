@@ -3,13 +3,12 @@
 
 .button {
     border: none;
-    padding: 16px 24px;
     border-radius: 100px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    
+    align-items: baseline;
+    min-width: 100px;   
 }
 
 @media only screen and (max-width: 600px) {
@@ -17,104 +16,137 @@
         width: 100%;
     }
 }
-.superprimary {
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+.sm {
+    height: 44px;
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+.md {
+    height: 55px;
+    padding: 16px 32px;
+    font-size: 18px;
+}
+
+.lg {
+    height: 65px;
+    padding: 20px 40px;
+    font-size: 20px;
+}
+
+.elevated {
+    box-shadow: 0px -1px 3px rgba(0, 0, 0, 0.05), 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
     background: white;
 }
-button.superprimary.selected:enabled {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.18);
+button.elevated.selected:enabled {
+    background: rgba(0, 0, 0, 0.16);
 }
-button.superprimary:hover:enabled {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.18);
+button.elevated:not(.selected):hover:enabled {
+    background: rgba(0, 0, 0, 0.08);
 }
-button.superprimary:active:enabled {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.18);
+button.elevated:not(.selected):active:enabled {
+    background: rgba(0, 0, 0, 0.16);
 }
-.superprimary.disabled {
+.elevated.disabled {
     box-shadow: none;
     color: #6A6A6A;
     background: #E5E5E5;
 }
 
 
-.primary {
+.filled {
     color: #FFFFFF;
-    background: var(--primary);
+    background: rgba(0, 67, 197, 0.92);
 }
-.primary.selected {
-    background: #1444EE;
+.filled.selected {
+    background: rgba(0, 67, 197, 1);
 }
-button.primary:hover:enabled {
-    background: #1444EE;
+button.filled:hover:enabled::backdrop {
+    background: rgba(0, 67, 197, 0.08);
 }
-button.primary:active:enabled {
+button.filled:active:enabled {
     background: #1444EE;
     opacity: .8;
 }
-.primary.disabled {
+.filled.disabled {
     color: #6A6A6A;
     background: #E5E5E5;
 }
 
-.secondary {
+.outlined {
     background: white;
-    border: 1px solid #0067C5;
+    border: 2px solid #0067C5;
     color: #0067C5;
     
 }
-.secondary.selected {
-    background: #1444EE0F;
+.outlined.selected {
+    background: rgba(0, 103, 197, 0.16);
 }
-button.secondary:hover:enabled {
-    background: #1444EE0F;
+button.outlined:not(.selected):hover:enabled {
+    background: rgba(0, 103, 197, 0.08);
 }
-button.secondary:active:enabled {
-    background: #1444EE0F;
+button.outlined:not(.selected):active:enabled {
+    background: rgba(0, 103, 197, 0.16);
 }
-.secondary.disabled {
+.outlined.disabled {
     color: #6A6A6A;
     border-color: #D7D7D7;
     background: white;
 }
 
-.tertiary {
+.text {
     background: white;
     border: none;
     color: #0067C5;
-    
+    text-decoration:underline;
+    text-decoration-skip-ink: none;
 }
 
-.tertiary.selected {
-    text-decoration:underline;
-    text-decoration-skip-ink: none;
+.text.selected {
+    background: rgba(0, 103, 197, 0.16);
 }
-button.tertiary:hover:enabled {
-    text-decoration:underline;
-    text-decoration-skip-ink: none;
+button.text:not(.selected):hover:enabled {
+    background: rgba(0, 103, 197, 0.08);
 }
-button.tertiary:active:enabled {
-    text-decoration:underline;
-    text-decoration-skip-ink: none;
+button.text:not(.selected):active:enabled {
+    background: rgba(0, 103, 197, 0.16);
 }
-.tertiary.disabled {
+.text.disabled {
     color: #6A6A6A;
     background: white;
 }
 
 
 .buttonText {
-    font-family: Source Sans Pro;
+    font-family: 'Source Sans Pro';
     font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
+    font-weight: 600;
     line-height: 20px;
     display: flex;
     align-items: center;
     text-align: center;
 }
-.icon {
+.iconR {
     margin-right: 8px;
+}
+.iconL {
+    margin-left: 8px;
 }
 .hideIcon {
     display: none;
+}
+.elevated-svg {
+    stroke: #6F6F6F;
+}
+.disabled {
+    stroke: #6F6F6F !important;
+}
+.filled-svg {
+    stroke: white;
+}
+.outlined-svg {
+    stroke: #0043C5;
+}
+.text-svg {
+    stroke: #0043C5;
 }
