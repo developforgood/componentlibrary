@@ -12,6 +12,6 @@
 .menu-item {
     border-bottom: 3px solid white;   
 }
-.menu-item:hover .dropdown-menu a {
+.menu-item:hover .drop-downmenu a {
     color: #282828;
 }

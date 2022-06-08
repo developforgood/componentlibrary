@@ -4,11 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 const Label = styled.label`
-  height: 21px;
-  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
   line-height: 20px;
   color: #6F6F6F;
   margin-bottom: 3px;
@@ -27,7 +24,6 @@ const DropDownHeader = styled("div")`
   box-sizing: border-box;
   border-radius: 4px;
   font-size: 18px;
-  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 400;
   padding: 15px 19px 16px 16px;
@@ -50,7 +46,6 @@ const DropDownList = styled("ul")`
   border: 2px solid #e5e5e5;
   box-sizing: border-box;
 
-  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -68,6 +63,7 @@ const ListItem = styled("li")`
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #FFFFFF;
   }
 `;
+
 
 const SelectText = styled.div`
   color: ${props => props.selected === true ? 'black': 'grey'}
@@ -88,19 +84,32 @@ export const DropDownInput = (props) => {
       setSelected(true);
     }
   };
+  const labelstyle = {
+    "fontSize" : process.env.TYPESCALE.mediumbase,
+    "height" : process.env.TYPESCALE.mediumbase + 5,
+    "fontFamily" : process.env.FONTS.currentFont
+  }
+  const textstyle = {
+    "fontSize" : process.env.TYPESCALE.smallbase,
+    "height" : process.env.TYPESCALE.smallbase + 5,
+    "fontFamily" : process.env.FONTS.currentFont
+  }
+  const fontstyle = {
+    "fontFamily" : process.env.FONTS.currentFont
+  }
 
   return (
     <DropDownContainer>
-        <Label>{props.LabelText}</Label>
-        <DropDownHeader onClick={toggling} isOpen = {isOpen}>
-          <SelectText selected = {selected}>
+        <Label style = {labelstyle}>{props.LabelText}</Label>
+        <DropDownHeader style = {fontstyle} onClick={toggling} isOpen = {isOpen}>
+          <SelectText style = {textstyle} selected = {selected}>
             {selectedOption || props.PlaceHolder}
           </SelectText>
           <FontAwesomeIcon icon={faAngleDown} />
         </DropDownHeader>
         {isOpen && (
           <DropDownListContainer>
-            <DropDownList>
+            <DropDownList style = {fontstyle}>
               {props.Options.map(option => (
                 <ListItem onClick={onOptionClicked(option)} key={Math.random()}>
                   {option}
@@ -109,6 +118,7 @@ export const DropDownInput = (props) => {
             </DropDownList>
           </DropDownListContainer>
         )}
+        <p> Uses medium base for label and small base for text </p>
     </DropDownContainer>
   );
 }

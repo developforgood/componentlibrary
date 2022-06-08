@@ -43,10 +43,9 @@ ul {
 .menu-item a {
     font-family: 'Nunito Sans';
     font-style: normal;
-    font-size: 16px;
+    font-size: 34px;
     line-height: 22px;
     color: #313131;
-
     text-align: center;
     text-decoration: none;
 }

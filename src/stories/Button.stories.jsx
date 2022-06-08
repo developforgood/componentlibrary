@@ -24,7 +24,7 @@ export default {
             description: {
               component: "Buttons are versatile in utility and are meant to be used throughout the webpage either standalone or as part of other components (navigation bar, models, cards, etc.) whenever you want a user to take action.  These designs mirror those of the Button component in our React Native library.",
             },
-          },
+        },
     },
 };
 

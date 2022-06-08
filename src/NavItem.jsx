@@ -5,10 +5,13 @@ function NavItem({align, text, hover, link}) {
   if (!link) {
     link = "/"; 
   }
+  const style = {
+    "fontSize" : process.env.TYPESCALE.smalltitle
+  }
   return (
     
     <li class={`${align} ${hover} menu-item`}>
-        <Link to={link}> {text} </Link>
+        <Link style = {style} to={link}> {text} </Link>
     </li>
   );
 }

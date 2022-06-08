@@ -16,22 +16,23 @@
         width: 100%;
     }
 }
+
 .sm {
+    height: 36px;
+    padding:8px 16px;
+    font-size: 14px;
+}
+
+.md {
     height: 44px;
     padding: 12px 24px;
     font-size: 16px;
 }
 
-.md {
+.lg {
     height: 55px;
     padding: 16px 32px;
     font-size: 18px;
-}
-
-.lg {
-    height: 65px;
-    padding: 20px 40px;
-    font-size: 20px;
 }
 
 .elevated {

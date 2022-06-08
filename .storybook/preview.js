@@ -1,4 +1,4 @@
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -95,7 +95,7 @@ process.env.DFG_FIELD_OUTLINE_COLORS = {
 };
 
 process.env.FONTS = {
-  fonts : ["'Lora', serif", "'Source Sans Pro', 'sans-serif'"],
+  fonts : ["'Lora', serif", "'Montserrat', 'sans-serif'"],
   currentFont : "'Lora', serif"
 }
 
