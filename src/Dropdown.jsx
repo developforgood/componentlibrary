@@ -11,10 +11,12 @@ function Dropdown({title, items, hover, hoverItem}) {
   const ref = useRef(null);
   const underlineHeight = 0;
   const style = {
-    "fontSize" : process.env.TYPESCALE.smalltitle
+    "fontSize" : process.env.TYPESCALE.smalltitle,
+    "fontFamily" : process.env.FONTS.currentFont
   }
   const linkstyle = {
-    "fontSize" : process.env.TYPESCALE.mediumbase
+    "fontSize" : process.env.TYPESCALE.mediumbase,
+    "fontFamily" : process.env.FONTS.currentFont
   }
   function resized() {
     if (ref != null && ref.current != null ) {

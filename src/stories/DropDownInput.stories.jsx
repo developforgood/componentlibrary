@@ -33,5 +33,9 @@ export default {
 const Template = (args) => <DropDownInput {...args} />;
 export const dropDownInput = Template.bind({});
 
-dropDownInput.args = {};
+dropDownInput.args = {
+  Options : ['item a', 'item b', 'item c'],
+  LabelText : "Label Placeholder",
+  PlaceHolder : "Input Text"
+};
 

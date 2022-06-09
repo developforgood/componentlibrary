@@ -80,7 +80,7 @@ export const BasicInput = (props) => {
     }
     return (
       <InputHolder>
-        <Label style = {labelstyle}> {props.LabelText} {required} </Label>
+        <Label style = {labelstyle}> Placeholder Label {required} </Label>
         <Text
           type = {props.Type}
           name = {props.name}

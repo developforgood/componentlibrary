@@ -78,7 +78,6 @@ button.filled:active:enabled {
     background: white;
     border: 2px solid #0067C5;
     color: #0067C5;
-    
 }
 .outlined.selected {
     background: rgba(0, 103, 197, 0.16);
