@@ -10,18 +10,16 @@ const InputHolder = styled.div`
   margin: 0px 0px 32px 0px; 
 `//ASK ABOUT PADDING FOR EACH INPUT
 
+
 const Label = styled.label`
   height: 21px;
-  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
   color: #6F6F6F;
   margin-bottom: 3px;
 `
+
 const ErrorSpan = styled.span`
-  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
@@ -36,8 +34,6 @@ const Text = styled.input`
   border: 1px solid;
   box-sizing: border-box;
   border-radius: 4px;
-  font-size: 18px;
-  font-family: 'Source Sans Pro';
   font-style: normal;
   font-weight: 400;
   padding: 15px 16px 16px 16px;
@@ -69,9 +65,22 @@ export const BasicInput = (props) => {
       setClicked(true)
       setDateCorrect(props.value == "" )
     }
+    const labelstyle = {
+      "fontSize" : process.env.TYPESCALE.mediumbase,
+      "height" : process.env.TYPESCALE.mediumbase + 5,
+      "fontFamily" : process.env.FONTS.currentFont
+    }
+    const textstyle = {
+      "fontSize" : process.env.TYPESCALE.smallbase,
+      "height" : process.env.TYPESCALE.smallbase + 5,
+      "fontFamily" : process.env.FONTS.currentFont
+    }
+    const fontstyle = {
+      "fontFamily" : process.env.FONTS.currentFont
+    }
     return (
       <InputHolder>
-        <Label> {props.LabelText} {required} </Label>
+        <Label style = {labelstyle}> Placeholder Label {required} </Label>
         <Text
           type = {props.Type}
           name = {props.name}
@@ -82,15 +91,17 @@ export const BasicInput = (props) => {
           onBlur = {OnBlur}
           clicked = {clicked}
           dateCorrect = {dateCorrect}
+          style = {textstyle}
           //activeColor = {ActiveColor}
         />
         {clicked && 
-            (<ErrorSpan>
+            (<ErrorSpan style = {fontstyle}>
               <FontAwesomeIcon icon={faTriangleExclamation} />
               &nbsp;
               {props.ErrorMessage}
             </ErrorSpan>)
         }
+        <p> Uses medium base for label and small base for text </p>
       </InputHolder>
     );
   };

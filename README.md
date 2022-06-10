@@ -5,13 +5,15 @@ Develop for Good Component Library made for every volunteer in DFG.
 ## How to open/run storybook
 
 !! You need a github account to access this library.
+!! You also need to download npm/node to run this storybook!
 
 1. Click the green "Code" button
 2. Copy the link that stars with https with the copy button right next to it
 3. Open terminal
-4. Type in " git clone "the link that you copied" "
+4. Type in " git clone "the link that you copied" " and then press enter
 5. Type in "cd componentlibrary"
-7. Type in 'npm run storybook'
+6. Type in 'npm install' and then press enter
+7. Type in 'npm run storybook' and then press enter
 
 And now the storybook will run on your local server!
 The browser will automatically open a new window with the component library. 

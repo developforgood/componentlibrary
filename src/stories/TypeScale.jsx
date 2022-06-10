@@ -5,7 +5,6 @@ import './typescale.css';
 
 function handleClickToSave(event) { 
   const toBeParsed = event.target.style.maxWidth.substring(0,event.target.style.maxWidth.length-2).valueOf()/300;
-  console.log(toBeParsed);
   switch (event.target.style.marginTop) {
     case "0px":
       process.env.TYPESCALE.extralargetitle = toBeParsed;

@@ -9,6 +9,7 @@ function NavigationBar({children }) {
             { children }
         </ul>
     </nav>  
+    <p> Uses small title for navigation bar fonts and medium base for button fonts</p>
     </Router>    
   );
 }
